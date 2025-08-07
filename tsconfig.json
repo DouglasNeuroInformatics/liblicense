@@ -1,7 +1,10 @@
 {
-  "compilerOptions": {
-    "lib": ["ESNext"]
-  },
   "extends": ["@douglasneuroinformatics/tsconfig"],
+  "compilerOptions": {
+    "declaration": true,
+    "lib": ["ESNext"],
+    "noEmit": false,
+    "outDir": "dist"
+  },
   "include": ["src/**/*"]
 }
