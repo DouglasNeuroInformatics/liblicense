@@ -1,0 +1,51 @@
+{
+  "name": "@douglasneuroinformatics/liblicense",
+  "type": "module",
+  "version": "0.0.1",
+  "packageManager": "pnpm@10.14.0",
+  "author": "Joshua Unrau",
+  "license": "Apache-2.0",
+  "homepage": "https://github.com/DouglasNeuroInformatics/liblicense#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DouglasNeuroInformatics/liblicense.git"
+  },
+  "bugs": {
+    "url": "https://github.com/DouglasNeuroInformatics/liblicense/issues"
+  },
+  "scripts": {
+    "lint": "tsc --noEmit && eslint --fix src",
+    "prepare": "husky"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "devDependencies": {
+    "@douglasneuroinformatics/eslint-config": "^5.3.5",
+    "@douglasneuroinformatics/prettier-config": "^0.3.0",
+    "@douglasneuroinformatics/semantic-release": "^0.2.1",
+    "@douglasneuroinformatics/tsconfig": "^1.0.4",
+    "@types/node": "22.x",
+    "eslint": "^9.32.0",
+    "husky": "^9.1.7",
+    "prettier": "^3.6.2",
+    "typescript": "5.8.x"
+  },
+  "commitlint": {
+    "extends": [
+      "@douglasneuroinformatics/semantic-release/commitlint-config"
+    ]
+  },
+  "prettier": "@douglasneuroinformatics/prettier-config",
+  "release": {
+    "extends": [
+      "@douglasneuroinformatics/semantic-release"
+    ]
+  }
+}
